@@ -17,9 +17,7 @@ class QCCN(nn.Module):
         elif resnet18:
             self.num_channel = 640
             self.feature_extractor = ResNet.resnet18()
-        else:
-            self.num_channel = 64
-            self.feature_extractor = Conv_4.BackBone(self.num_channel)
+
         self.shots = shots
         self.way = way
         self.resnet = resnet
